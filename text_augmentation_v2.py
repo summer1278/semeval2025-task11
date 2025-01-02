@@ -118,7 +118,12 @@ def exam_augmentation(methods,input_path='data.csv',output_path='augmented_data/
         # print(df_emotion.value_counts())
     # print(df.text.tolist())
     X_train, y_train, X_test, y_test = iterative_train_test_split(np.array(df.text.tolist()).reshape(-1,1), 
+<<<<<<< HEAD
         np.array(df_emotion.values.tolist()) , test_size = 0.5)
+=======
+                                                                  np.array(df_emotion.values.tolist()) , 
+                                                                  test_size = 0.2)
+>>>>>>> 682251df53b96cae695e7eb6cc05c87302906c0b
     # X_train = df.text.tolist()
     # y_train = df_emotion.values.tolist() 
     X_train = X_train.reshape(-1).tolist()
@@ -171,9 +176,9 @@ def progressBar(current, total, barLength = 20):
     pass
 
 if __name__ == '__main__':
-    # exam_augmentation(character_augmenter_list,input_path='semeval2025-task11/train/track_a/eng.csv',output_path='semeval2025-task11/new_train/')
-    exam_augmentation(word_augmenter_list,input_path='semeval2025-task11/train/track_a/eng.csv',output_path='semeval2025-task11/new_train/')
-    exam_augmentation(sentence_augmenter_list,input_path='semeval2025-task11/train/track_a/eng.csv',output_path='semeval2025-task11/new_train/')
+    exam_augmentation(character_augmenter_list,input_path='data/train/track_a/eng.csv',output_path='new_train/')
+    # exam_augmentation(word_augmenter_list,input_path='semeval2025-task11/train/track_a/eng.csv',output_path='semeval2025-task11/new_train/')
+    # exam_augmentation(sentence_augmenter_list,input_path='semeval2025-task11/train/track_a/eng.csv',output_path='semeval2025-task11/new_train/')
     # for lst in [character_augmenter_list,word_augmenter_list,sentence_augmenter_list]:
     #     exam_augmentation(lst,input_path='semeval2025-task11/train/track_a/eng.csv',output_path='semeval2025-task11/new_train/')
 
