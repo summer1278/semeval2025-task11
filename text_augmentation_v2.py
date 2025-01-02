@@ -117,7 +117,8 @@ def exam_augmentation(methods,input_path='data.csv',output_path='augmented_data/
         df_emotion = df[[column for column in df.columns.tolist() if column in (labels)]]
         # print(df_emotion.value_counts())
     # print(df.text.tolist())
-    X_train, y_train, X_test, y_test = iterative_train_test_split(np.array(df.text.tolist()).reshape(-1,1), np.array(df_emotion.values.tolist()) , test_size = 0.5)
+    X_train, y_train, X_test, y_test = iterative_train_test_split(np.array(df.text.tolist()).reshape(-1,1), 
+        np.array(df_emotion.values.tolist()) , test_size = 0.5)
     # X_train = df.text.tolist()
     # y_train = df_emotion.values.tolist() 
     X_train = X_train.reshape(-1).tolist()
