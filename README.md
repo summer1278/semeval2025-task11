@@ -10,7 +10,7 @@ Cite the work
 ```
 @InProceedings{Xia:SemEval:2025,
     title = "xiacui at {S}em{E}val-2025 Task 11: Addressing Data Imbalance in Transformer-Based Multi-Label Emotion Detection with Weighted Loss",
-    author = "\textbf{Xia Cui}",
+    author = "Xia Cui",
     booktitle = "Proceedings of the The 19th International Workshop on Semantic Evaluation (SemEval-2025)",
     month = jul,
     year = "2025",
